@@ -377,8 +377,8 @@ abstract class BarLineScatterCandleBubbleController<
   ///
   /// @param maxXRange The maximum visible range of x-values.
   void setVisibleXRangeMaximum(double maxXRange) {
-    double xScale = xAxis!.axisRange / (maxXRange);
-    viewPortHandler!.setMinimumScaleX(xScale);
+    //double xScale = xAxis!.axisRange / (maxXRange);
+    viewPortHandler!.setMinimumScaleX(maxXRange);
   }
 
   /// Sets the size of the area (range on the x-axis) that should be minimum
@@ -388,8 +388,8 @@ abstract class BarLineScatterCandleBubbleController<
   ///
   /// @param minXRange The minimum visible range of x-values.
   void setVisibleXRangeMinimum(double minXRange) {
-    double xScale = xAxis!.axisRange / (minXRange);
-    viewPortHandler!.setMaximumScaleX(xScale);
+    //double xScale = xAxis!.axisRange / (minXRange);
+    viewPortHandler!.setMaximumScaleX(minXRange);
   }
 
   /// Limits the maximum and minimum x range that can be visible by pinching and zooming. e.g. minRange=10, maxRange=100 the
